@@ -20,6 +20,7 @@ namespace GitDemo1
         SpriteBatch spriteBatch;
 
         SpriteFont Font;
+        Texture2D Ball;
 
         public Game1()
         {
@@ -50,6 +51,7 @@ namespace GitDemo1
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             Font = Content.Load<SpriteFont>("Font");
+            Ball = Content.Load<Texture2D>("Ball");
             // TODO: use this.Content to load your game content here
         }
 
@@ -88,7 +90,11 @@ namespace GitDemo1
 
             spriteBatch.Begin();
             spriteBatch.DrawString(Font, "Test", Vector2.One * 150f, Color.Red);
+<<<<<<< HEAD
             spriteBatch.DrawString(Font, "Test2", Vector2.One * 100f, Color.Red);
+=======
+            spriteBatch.Draw(Ball, Vector2.One * 50f, Color.White);
+>>>>>>> Ball
             spriteBatch.End();
 
             base.Draw(gameTime);
