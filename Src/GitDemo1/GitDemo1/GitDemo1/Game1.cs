@@ -88,6 +88,7 @@ namespace GitDemo1
 
             spriteBatch.Begin();
             spriteBatch.DrawString(Font, "Test", Vector2.One * 150f, Color.Red);
+            spriteBatch.DrawString(Font, "Test2", Vector2.One * 100f, Color.Red);
             spriteBatch.End();
 
             base.Draw(gameTime);
