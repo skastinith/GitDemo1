@@ -19,6 +19,8 @@ namespace GitDemo1
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        SpriteFont Font;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -47,6 +49,7 @@ namespace GitDemo1
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            Font = Content.Load<SpriteFont>("Font");
             // TODO: use this.Content to load your game content here
         }
 
@@ -83,7 +86,9 @@ namespace GitDemo1
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            spriteBatch.DrawString(Font, "Test", Vector2.One * 150f, Color.Red);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
